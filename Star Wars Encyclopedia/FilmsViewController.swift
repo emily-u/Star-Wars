@@ -12,9 +12,7 @@ class FilmsViewController: UITableViewController {
     var films = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "https://swapi.co/api/films")
-        let session = URLSession.shared
-        let task = session.dataTask(with: url!, completionHandler: {
+        StarWarsModel.getAllFilms(completionHandler: {
             data, response, error in
             do {
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
@@ -22,18 +20,17 @@ class FilmsViewController: UITableViewController {
                         let resultsArray = results as! NSArray
                         for i in resultsArray{
                             let filmsDict = i as! NSDictionary
-                            self.films.append(filmsDict["title"]! as! String)
-                        }
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
+                            self.films.append(filmsDict["title"] as! String)
                         }
                     }
                 }
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             } catch {
-                print(error)
+                print("error!")
             }
         })
-        task.resume()
     }
     
     override func viewWillAppear(_ animated: Bool) {

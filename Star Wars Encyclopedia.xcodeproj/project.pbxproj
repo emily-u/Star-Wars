@@ -15,6 +15,7 @@
 		A135644220166FC300084C43 /* Star_Wars_EncyclopediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135644120166FC300084C43 /* Star_Wars_EncyclopediaTests.swift */; };
 		A135644D20166FC300084C43 /* Star_Wars_EncyclopediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135644C20166FC300084C43 /* Star_Wars_EncyclopediaUITests.swift */; };
 		A135645F2016A3B800084C43 /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135645E2016A3B800084C43 /* FilmsViewController.swift */; };
+		A13564612016BDEB00084C43 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13564602016BDEB00084C43 /* StarWarsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A135644C20166FC300084C43 /* Star_Wars_EncyclopediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star_Wars_EncyclopediaUITests.swift; sourceTree = "<group>"; };
 		A135644E20166FC300084C43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A135645E2016A3B800084C43 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
+		A13564602016BDEB00084C43 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A135642C20166FC300084C43 /* AppDelegate.swift */,
 				A135642E20166FC300084C43 /* PeopleViewController.swift */,
 				A135645E2016A3B800084C43 /* FilmsViewController.swift */,
+				A13564602016BDEB00084C43 /* StarWarsModel.swift */,
 				A135643020166FC300084C43 /* Main.storyboard */,
 				A135643320166FC300084C43 /* Assets.xcassets */,
 				A135643520166FC300084C43 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				A135645F2016A3B800084C43 /* FilmsViewController.swift in Sources */,
 				A135642F20166FC300084C43 /* PeopleViewController.swift in Sources */,
+				A13564612016BDEB00084C43 /* StarWarsModel.swift in Sources */,
 				A135642D20166FC300084C43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
