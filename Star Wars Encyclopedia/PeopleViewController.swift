@@ -49,6 +49,12 @@ class PeopleViewController: UITableViewController {
         // to run the completion handler. This is async!
         task.resume()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("PeopleViewController viewWillAppear")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

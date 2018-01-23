@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5S1-eg-plN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xD8-at-FdY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--People View Controller-->
+        <!--people-->
         <scene sceneID="RHi-o7-8WA">
             <objects>
                 <tableViewController id="5S1-eg-plN" customClass="PeopleViewController" customModule="Star_Wars_Encyclopedia" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,10 +32,58 @@
                             <outlet property="delegate" destination="5S1-eg-plN" id="KFM-RL-z9u"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="people" id="O1M-8U-qSd" userLabel="People"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2I7-3X-D4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="-463"/>
+            <point key="canvasLocation" x="713" y="-465"/>
+        </scene>
+        <!--films-->
+        <scene sceneID="fuv-jW-Rxe">
+            <objects>
+                <tableViewController id="JIP-0C-buh" customClass="FilmsViewController" customModule="Star_Wars_Encyclopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RCr-xe-fvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YDS-om-jqC">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YDS-om-jqC" id="Rsz-lV-Srz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JIP-0C-buh" id="B0u-zU-ZCU"/>
+                            <outlet property="delegate" destination="JIP-0C-buh" id="aIR-Vh-ODA"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="films" id="zil-k3-JzJ" userLabel="films"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gp-nf-by8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="337"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3w3-ZL-Bkc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xD8-at-FdY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XQz-EV-JMV">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5S1-eg-plN" kind="relationship" relationship="viewControllers" id="S4J-6d-OBO"/>
+                        <segue destination="JIP-0C-buh" kind="relationship" relationship="viewControllers" id="cfG-wn-RMv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycS-lX-CcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126.40000000000001" y="-464.16791604197903"/>
         </scene>
     </scenes>
 </document>
